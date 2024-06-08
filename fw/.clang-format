@@ -1,0 +1,41 @@
+---
+BasedOnStyle: WebKit
+Language: Cpp
+Standard: c++20
+ColumnLimit: 120
+PointerAlignment: Left
+IndentWidth: 4
+BreakBeforeBraces: Allman
+AllowShortFunctionsOnASingleLine: Empty
+SpaceBeforeCpp11BracedList: false
+Cpp11BracedListStyle: true
+IndentCaseLabels: true
+NamespaceIndentation: None
+FixNamespaceComments: true
+ShortNamespaceLines: 0
+AllowAllArgumentsOnNextLine: true
+AllowAllConstructorInitializersOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackArguments: false
+BinPackParameters: false
+AlignAfterOpenBracket: AlwaysBreak
+AlwaysBreakTemplateDeclarations: Yes
+SpaceAfterTemplateKeyword: false
+IncludeCategories:
+  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+    Priority:        3
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '^(<|"(isl|json)/)'
+    Priority:        2
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '.*'
+    Priority:        4
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '^<(gtest|gmock)'
+    Priority:        1
+    SortPriority:    0
+    CaseSensitive:   false
+PenaltyReturnTypeOnItsOwnLine: 99999999
